@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>命盤測驗｜探索你的日主｜沐洸八字療心室</title>
+<meta name="description" content="輸入出生年月日，揭示你的真正日主。命盤分析、十神解讀、五行能量。沐洸八字療心室。"/>
+<meta property="og:title" content="你的日主是什麼？｜沐洸八字療心室"/>
+<meta property="og:description" content="45 秒揭示你的日主——決定你看世界的方式、與人相處的模式。免費命盤測驗，立即體驗。"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="沐洸八字療心室"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#0c0a08;--bg2:#141210;--bg3:#1c1814;--bg4:#26221c;
+--sf:rgba(255,255,255,0.03);--sf2:rgba(255,255,255,0.06);
+--bd:rgba(180,160,120,0.1);--bds:rgba(180,160,120,0.2);--bdm:rgba(180,160,120,0.32);
+--tx:#f5f0e6;--tx2:#ccc0a2;--tx3:#a09478;--tx4:#8a7e68;
+--ink:#dcc070;--ink2:#b8a058;
+--wood:#48b868;--fire:#e84830;--earth:#d8a830;--metal:#a8b8c8;--water:#3088c8;
+--wood-bg:#0c1a0e;--fire-bg:#1a0c08;--earth-bg:#1a1606;--metal-bg:#0e1018;--water-bg:#061018;
+--wood-gl:rgba(72,184,104,0.07);--fire-gl:rgba(232,72,48,0.07);--earth-gl:rgba(216,168,48,0.07);--metal-gl:rgba(168,184,200,0.07);--water-gl:rgba(48,136,200,0.07);
+--fd:'Cormorant','Noto Serif TC',serif;--fb:'Zen Kaku Gothic New','Noto Serif TC',sans-serif;--fm:'IBM Plex Mono',monospace;
+--ease:cubic-bezier(0.16,1,0.3,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--tx2);line-height:1.72;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background-color 1.5s ease}
+::selection{background:rgba(220,192,112,0.2);color:var(--tx)}
+body::after{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:0.12;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwBAMAAAClLOS0AAAAElBMVEUAAAAAAAAAAAAAAAAAAAAAAAA6C80AAAAABnRSTlMAESIzRFXRLSoAAAA5SURBVDjLY2AYBaNg2AMGF0YGBQYXRgUGBhdGJQYGF0Y1BgYXRk0GBhdGHQYGF0Z9BgYXxlEwHAAAEjsCYZgXrYsAAAAASUVORK5CYII=")}
+.amb{position:fixed;top:0;left:50%;width:800px;height:800px;transform:translate(-50%,-30%);border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(220,192,112,0.05) 0%,transparent 70%);transition:background 2s ease}
+.ctn{max-width:580px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+.nav{padding:16px 0;position:relative;z-index:10}.nav-i{max-width:580px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--tx)}.logo-s{width:26px;height:26px;border:1px solid var(--ink2);display:grid;place-items:center;font-size:0.7rem;color:var(--ink);font-family:var(--fd);font-weight:700}.logo-t{font-family:var(--fd);font-size:0.85rem;font-weight:500;color:var(--tx3);letter-spacing:0.04em}
+.hero{padding:72px 0 40px;text-align:center;position:relative}.hero-deco{position:absolute;font-family:var(--fd);writing-mode:vertical-rl;font-size:0.7rem;color:var(--tx4);letter-spacing:0.5em;opacity:0.2;top:20px}.hero-deco.l{left:-36px}.hero-deco.r{right:-36px}
+.hero-ey{font-family:var(--fm);font-size:0.62rem;color:var(--tx3);letter-spacing:0.22em;margin-bottom:28px}
+.hero h1{font-family:var(--fd);font-size:clamp(2.2rem,6.5vw,3.4rem);font-weight:600;color:var(--tx);line-height:1.18;margin-bottom:20px}.hero h1 strong{font-weight:700;color:#e8c040}
+.hero-sub{font-size:0.92rem;color:var(--tx2);max-width:360px;margin:0 auto 36px;line-height:1.9}.hero-line{width:1px;height:40px;background:linear-gradient(180deg,var(--bdm),transparent);margin:0 auto}
+.proof{display:flex;justify-content:center;gap:40px;padding:18px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);margin:24px 0 40px}.proof-n{font-family:var(--fd);font-size:1.35rem;font-weight:700;color:var(--tx);display:block;line-height:1.2}.proof-l{font-size:0.65rem;color:var(--tx3)}
+.live-c{display:flex;align-items:center;justify-content:center;gap:5px;font-size:0.7rem;color:var(--tx3);margin-bottom:8px}.live-dot{width:5px;height:5px;border-radius:50%;background:var(--wood);animation:pls 1.5s ease-in-out infinite}
+@keyframes pls{0%,100%{opacity:1}50%{opacity:0.3}}
+.qc{background:var(--bg2);border:1px solid var(--bds);border-radius:16px;overflow:hidden;position:relative}.qc::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--bdm),transparent)}
+.qhd{padding:16px 28px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}.qhd-t{font-family:var(--fd);font-size:0.92rem;font-weight:500;color:var(--tx)}.qhd-p{font-size:0.6rem;color:var(--tx4)}.qbd{padding:32px 28px 36px}
+.steps{display:flex;justify-content:center;align-items:center;gap:0;margin-bottom:32px}.st-c{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bg4);display:grid;place-items:center;font-family:var(--fd);font-size:0.72rem;font-weight:600;color:var(--tx4);transition:all 0.6s var(--ease);background:var(--bg2);position:relative;z-index:1}.st-c.on{border-color:var(--ink);color:var(--ink);box-shadow:0 0 16px rgba(220,192,112,0.06)}.st-c.ok{border-color:var(--ink);background:var(--ink);color:var(--bg)}.st-l{width:40px;height:1px;background:var(--bg4);transition:background 0.6s var(--ease)}.st-l.ok{background:var(--ink)}
+.fld{margin-bottom:20px}.fld-lab{display:block;font-size:0.84rem;font-weight:500;color:var(--tx);margin-bottom:8px}.fld-hint{font-size:0.68rem;color:var(--tx3);margin-top:6px;line-height:1.6}
+.date-native{width:100%;padding:14px 16px;border:1.5px solid var(--bg4);border-radius:10px;background:var(--bg3);font-family:var(--fb);font-size:1rem;color:var(--tx);cursor:pointer;transition:border-color 0.3s,box-shadow 0.3s;-webkit-appearance:none;color-scheme:dark}.date-native:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(220,192,112,0.06)}.date-native::-webkit-calendar-picker-indicator{filter:invert(0.7) sepia(0.3) hue-rotate(10deg);cursor:pointer;padding:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:15px 28px;border:none;border-radius:12px;font-family:var(--fb);font-size:0.92rem;font-weight:600;cursor:pointer;transition:all 0.4s var(--ease);width:100%;position:relative;overflow:hidden}.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.btn-main{background:var(--ink);color:var(--bg);box-shadow:0 4px 20px rgba(220,192,112,0.1)}.btn-main:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 28px rgba(220,192,112,0.16)}.btn-main:disabled{opacity:0.2;cursor:not-allowed;transform:none;box-shadow:none}
+.btn-line{background:#06C755;color:#fff;box-shadow:0 4px 16px rgba(6,199,85,0.14);padding:16px 28px;font-size:0.95rem}.btn-line:hover{background:#05a84a;transform:translateY(-2px)}
+.btn-skip{background:none;border:none;color:var(--tx4);font-size:0.76rem;cursor:pointer;padding:8px;font-family:var(--fb)}.btn-ghost{background:none;border:1px solid var(--bd);color:var(--tx3);border-radius:10px;padding:10px 20px;font-size:0.8rem;width:auto}
+.ld{display:none;text-align:center;padding:56px 0}.ld.on{display:block;animation:fi 0.4s ease}@keyframes fi{from{opacity:0}to{opacity:1}}
+.ld-ring{width:52px;height:52px;margin:0 auto 20px;position:relative}.ld-ring::before,.ld-ring::after{content:'';position:absolute;inset:0;border:1.5px solid var(--bg4);border-radius:50%}.ld-ring::before{border-top-color:var(--ink);animation:sp 1.2s linear infinite}.ld-ring::after{border-bottom-color:var(--ink2);animation:sp 2s linear infinite reverse;inset:5px}@keyframes sp{to{transform:rotate(360deg)}}
+.ld-t{font-family:var(--fd);font-size:1rem;font-weight:500;color:var(--tx3)}.ld-s{font-size:0.7rem;color:var(--tx4);margin-top:4px}
+.res{display:none}.res.vis{display:block}
+.rev{text-align:center;padding:44px 0 20px;animation:revIn 1s var(--ease)}@keyframes revIn{from{opacity:0;transform:scale(0.92) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.rev-kanji{font-family:'Noto Serif TC',serif;font-size:clamp(5.5rem,18vw,9rem);font-weight:900;line-height:1;margin-bottom:4px;animation:kP 0.9s cubic-bezier(0.34,1.56,0.64,1)}@keyframes kP{0%{opacity:0;transform:scale(0.5);filter:blur(12px)}50%{transform:scale(1.05);filter:blur(0)}100%{transform:scale(1)}}
+.rev-sym{margin:12px auto;width:48px;height:48px;opacity:0.6}
+.rev-name{font-family:var(--fd);font-size:1.4rem;font-weight:500;color:var(--tx);margin-bottom:4px;letter-spacing:0.03em}.rev-sub{font-family:var(--fm);font-size:0.6rem;color:var(--tx4);letter-spacing:0.12em}.rev-dm{margin-top:16px;font-size:0.88rem;color:var(--tx2);line-height:1.7;max-width:420px;margin-left:auto;margin-right:auto}
+.seal{margin:24px auto;max-width:320px;padding:32px 22px 24px;text-align:center;position:relative;border:1px solid var(--bds);border-radius:12px;overflow:hidden}.seal::before{content:'';position:absolute;inset:0;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0v40M0 20h40' stroke='%23fff' stroke-width='0.4' opacity='0.3'/%3E%3C/svg%3E")}
+.seal-stamp{position:absolute;top:14px;right:14px;width:36px;height:36px;border:1.5px solid;border-radius:3px;display:grid;place-items:center;font-family:'Noto Serif TC',serif;font-size:0.6rem;font-weight:900;transform:rotate(-12deg);opacity:0.4;z-index:2}
+.seal-k{font-family:'Noto Serif TC',serif;font-size:3.2rem;font-weight:900;line-height:1;margin-bottom:6px;position:relative;z-index:1}.seal-t{font-size:0.84rem;color:var(--tx);font-weight:500;margin-bottom:2px;position:relative;z-index:1}.seal-s{font-family:var(--fm);font-size:0.58rem;color:var(--tx4);letter-spacing:0.1em;margin-bottom:14px;position:relative;z-index:1}
+.seal-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;position:relative;z-index:1}.seal-tag{padding:3px 11px;border-radius:999px;font-size:0.68rem;font-weight:500}.seal-f{margin-top:14px;padding-top:10px;border-top:1px solid var(--bd);position:relative;z-index:1}.seal-ft{font-family:var(--fm);font-size:0.5rem;color:var(--tx4);letter-spacing:0.12em}
+.rarity{text-align:center;margin:18px 0;padding:14px;border-radius:10px;border:1px solid var(--bd);background:var(--sf)}.rarity-pct{font-family:var(--fd);font-size:1.5rem;font-weight:700;display:block;margin-bottom:2px}.rarity-msg{font-size:0.82rem;color:var(--tx2);line-height:1.6}
+.sec{display:flex;align-items:center;gap:12px;margin:28px 0 18px}.sec-l{flex:1;height:1px;background:var(--bd)}.sec-lb{font-family:var(--fm);font-size:0.52rem;color:var(--tx4);letter-spacing:0.14em;white-space:nowrap}
+.pillars{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin:24px auto;max-width:400px;background:var(--bd);border-radius:12px;overflow:hidden}.pil{background:var(--bg2);text-align:center}.pil-lab{font-family:var(--fm);font-size:0.55rem;color:var(--tx4);letter-spacing:0.12em;padding:8px 0 5px;border-bottom:1px solid var(--bd)}.pil-stem{font-family:'Noto Serif TC',serif;font-size:2.2rem;font-weight:900;padding:14px 0 3px;line-height:1}.pil-sel{font-family:var(--fm);font-size:0.55rem;letter-spacing:0.06em;padding-bottom:6px}.pil-br{font-family:'Noto Serif TC',serif;font-size:2.2rem;font-weight:900;color:var(--tx);padding:6px 0 3px;border-top:1px solid var(--bd);line-height:1}.pil-bel{font-family:var(--fm);font-size:0.55rem;color:var(--tx3);padding-bottom:6px}.pil-hid{padding:6px 0 10px;border-top:1px solid var(--bd)}.pil-hid-lb{font-family:var(--fm);font-size:0.46rem;color:var(--tx4);letter-spacing:0.1em;margin-bottom:3px}.pil-hid-st{display:flex;justify-content:center;gap:6px}.pil-hs{font-family:'Noto Serif TC',serif;font-size:0.92rem;font-weight:700}.pil.dm{background:var(--bg3)}.pil.dm .pil-lab{color:var(--ink);font-weight:600}
+.ny{margin:20px 0;text-align:center;padding:18px;border:1px solid var(--bd);border-radius:10px;background:var(--sf)}.ny-lb{font-family:var(--fm);font-size:0.52rem;color:var(--tx4);letter-spacing:0.12em;margin-bottom:6px}.ny-n{font-family:var(--fd);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:4px}.ny-d{font-size:0.78rem;color:var(--tx3);line-height:1.7;max-width:380px;margin:0 auto}
+.tg-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:20px 0}.tg-item{padding:14px;border:1px solid var(--bd);border-radius:8px;background:var(--sf);transition:border-color 0.3s}.tg-item:hover{border-color:var(--bds)}.tg-hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}.tg-n{font-family:'Noto Serif TC',serif;font-size:0.85rem;font-weight:700;color:var(--tx)}.tg-tp{font-family:var(--fm);font-size:0.52rem;padding:2px 7px;border-radius:999px}.tg-d{font-size:0.74rem;color:var(--tx3);line-height:1.6;margin:0}
+.ssn{margin:20px 0;padding:18px;border:1px solid var(--bd);border-radius:10px;background:var(--sf)}.ssn-t{font-family:var(--fd);font-size:0.92rem;font-weight:600;color:var(--tx);margin-bottom:8px}.ssn-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 11px;border-radius:999px;font-size:0.7rem;font-weight:600;margin-bottom:8px}.ssn-s{background:rgba(72,184,104,0.12);color:var(--wood)}.ssn-n{background:rgba(220,192,112,0.12);color:var(--ink)}.ssn-w{background:rgba(232,72,48,0.12);color:var(--fire)}.ssn-d{font-size:0.8rem;color:var(--tx3);line-height:1.7}
+.ebar{margin:24px 0}.ebar-t{font-family:var(--fd);font-size:0.88rem;font-weight:500;color:var(--tx);margin-bottom:12px}.erow{display:grid;grid-template-columns:22px 1fr 34px;gap:7px;align-items:center;margin-bottom:7px}.eel{font-size:0.8rem;font-weight:600;color:var(--tx)}.ebg{height:7px;border-radius:4px;background:var(--bg4);overflow:hidden}.efill{height:100%;border-radius:4px;transition:width 1.6s var(--ease)}.epct{font-family:var(--fm);font-size:0.65rem;color:var(--tx3);text-align:right}
+.sum-card{border-radius:12px;padding:24px;margin:20px 0;border:1px solid var(--bd)}.sum-card h3{font-family:var(--fd);font-size:1.05rem;font-weight:600;color:var(--tx);margin-bottom:8px}.sum-card p{font-size:0.85rem;line-height:1.85;color:var(--tx2);margin:0}
+.ins-grid{display:grid;gap:10px;margin:20px 0}.ins{border-radius:10px;padding:18px;border:1px solid var(--bd);background:var(--sf);transition:border-color 0.3s}.ins:hover{border-color:var(--bds)}.ins-ico{width:20px;height:20px;margin-bottom:8px;opacity:0.7}.ins-t{font-family:var(--fd);font-size:0.92rem;font-weight:600;color:var(--tx);margin-bottom:5px}.ins-b{font-size:0.82rem;color:var(--tx3);line-height:1.75;margin:0}
+.muray-bio{display:flex;gap:16px;padding:22px;border-radius:12px;border:1px solid var(--bds);background:var(--bg2);margin:24px 0;align-items:center}.muray-photo{width:56px;height:56px;border-radius:50%;border:2px solid var(--ink2);display:grid;place-items:center;flex-shrink:0;font-family:'Noto Serif TC',serif;font-size:1.3rem;font-weight:900;color:var(--ink);background:var(--bg3)}.muray-info{flex:1}.muray-name{font-family:var(--fd);font-size:1rem;font-weight:600;color:var(--tx);margin-bottom:2px}.muray-cred{font-family:var(--fm);font-size:0.62rem;color:var(--ink);letter-spacing:0.04em;margin-bottom:6px}.muray-desc{font-size:0.78rem;color:var(--tx3);line-height:1.7}
+.muray{padding:22px;border-radius:12px;background:rgba(220,192,112,0.03);border:1px solid rgba(220,192,112,0.08);margin:24px 0;display:flex;gap:14px}.muray-av{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--ink2);display:grid;place-items:center;flex-shrink:0;font-family:var(--fd);font-size:0.95rem;font-weight:600;color:var(--ink)}.muray-bd{font-size:0.82rem;color:var(--tx2);line-height:1.8;font-style:italic}.muray-nm{font-size:0.68rem;color:var(--tx4);font-style:normal;margin-top:6px;font-weight:600}
+.topics{margin:24px 0}.topics-grid{display:grid;gap:6px}.topic-item{padding:12px 16px;border-radius:8px;border:1px solid var(--bd);background:var(--sf);font-size:0.82rem;color:var(--tx2);line-height:1.6;cursor:default;transition:border-color 0.3s;display:flex;align-items:center;gap:10px}.topic-item:hover{border-color:var(--bds)}.topic-ico{width:16px;height:16px;flex-shrink:0;opacity:0.6}
+.compat{margin:24px 0;padding:24px;border-radius:14px;background:linear-gradient(135deg,rgba(220,192,112,0.03),transparent);border:1px solid rgba(220,192,112,0.1);text-align:center}.compat h3{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--tx);margin-bottom:6px}.compat>p{font-size:0.82rem;color:var(--tx3);margin-bottom:14px;line-height:1.7}
+.compat-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:10px;align-items:center;max-width:260px;margin:0 auto 14px}.compat-me-k{font-family:'Noto Serif TC',serif;font-size:1.8rem;font-weight:900}.compat-me-l{font-size:0.65rem;color:var(--tx3);margin-top:2px}.compat-vs{font-family:var(--fd);font-size:1.1rem;color:var(--tx4);font-style:italic}.compat-them{opacity:0.35;font-size:1.8rem;color:var(--tx4)}
+.compat-5{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;max-width:280px;margin:0 auto 14px}.compat-5 button{padding:7px;font-size:0.8rem;border-radius:8px;border:none;cursor:pointer;font-family:var(--fb);font-weight:600;transition:all 0.2s}.compat-r{font-size:0.82rem;color:var(--tx2);line-height:1.7;min-height:20px}
+.bridge{margin:24px 0;padding:22px;border-radius:12px;background:linear-gradient(135deg,rgba(220,192,112,0.03),rgba(220,192,112,0.01));border:1px solid rgba(220,192,112,0.1)}.bridge-t{font-family:var(--fd);font-size:0.95rem;font-weight:600;color:var(--tx);margin-bottom:10px}.bridge-g{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}.bridge-col{padding:12px;border-radius:8px;font-size:0.76rem;line-height:1.8}.bridge-ok{background:rgba(72,184,104,0.04);border:1px solid rgba(72,184,104,0.1);color:var(--tx3)}.bridge-lk{background:rgba(220,192,112,0.03);border:1px solid var(--bd);color:var(--tx4);position:relative}.bridge-col-t{font-family:var(--fm);font-size:0.55rem;color:var(--tx4);letter-spacing:0.1em;margin-bottom:5px}.bridge-note{font-size:0.72rem;color:var(--tx4);font-style:italic}
+.social-zone{margin-top:32px;padding-top:24px;border-top:2px solid var(--bg4)}
+.sh-bar{display:flex;gap:8px;justify-content:center;margin:16px 0}.sh-btn{display:inline-flex;align-items:center;gap:5px;padding:9px 16px;border-radius:10px;border:none;font-family:var(--fb);font-size:0.78rem;font-weight:600;cursor:pointer;transition:all 0.3s}.sh-btn:hover{transform:translateY(-1px)}.sh-line{background:#06C755;color:#fff}.sh-copy{background:var(--bg4);color:var(--tx2);border:1px solid var(--bds)}.sh-prompt{text-align:center;font-size:0.7rem;color:var(--tx3);margin:6px 0}
+.chal{text-align:center;margin:20px 0;padding:18px;border-radius:12px;border:1.5px solid var(--bds);background:var(--sf)}.chal-t{font-size:0.85rem;color:var(--tx2);margin-bottom:10px;line-height:1.6}.chal-t strong{color:var(--tx)}.chal-url{display:flex;align-items:center;gap:7px;max-width:340px;margin:0 auto}.chal-in{flex:1;padding:9px 12px;border:1px solid var(--bd);border-radius:7px;background:var(--bg3);color:var(--tx);font-family:var(--fm);font-size:0.68rem;outline:none}.chal-cp{padding:9px 14px;border:none;border-radius:7px;background:var(--ink);color:var(--bg);font-family:var(--fb);font-size:0.74rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.gate{text-align:center;padding:28px 22px;border:1px dashed var(--bds);border-radius:12px;margin:24px 0;background:var(--sf)}.gate h3{font-family:var(--fd);font-size:1.1rem;font-weight:600;color:var(--tx);margin-bottom:6px}.gate>p{font-size:0.82rem;color:var(--tx3);margin-bottom:16px;max-width:320px;margin-left:auto;margin-right:auto;line-height:1.7}.gate .btn-line{width:auto;display:inline-flex}
+.frpt{display:none;animation:fi 0.6s ease}.frpt.unlocked{display:block}
+.testi{padding:22px;border-radius:10px;border:1px solid var(--bd);margin:20px 0;background:var(--sf)}.testi-q{font-size:0.82rem;color:var(--tx2);line-height:1.75;font-style:italic;margin-bottom:8px}.testi-a{font-size:0.68rem;color:var(--tx4)}
+.foot{padding:24px 0;text-align:center;border-top:1px solid var(--bd);margin-top:36px}.foot p{font-size:0.6rem;color:var(--tx4);line-height:1.6}.foot a{color:var(--tx3)}
+@media(max-width:640px){.ctn{padding:0 18px}.hero{padding:52px 0 32px}.hero-deco{display:none}.qbd{padding:24px 18px 28px}.qhd{padding:12px 18px}.proof{gap:20px;padding:14px 0}.nav-i{padding:0 18px}.seal{padding:24px 16px 20px}.muray{flex-direction:column;align-items:center;text-align:center}.muray-bio{flex-direction:column;text-align:center}.muray-photo{margin:0 auto}.gate{padding:22px 16px}.tg-grid{grid-template-columns:1fr}.bridge-g{grid-template-columns:1fr}.pillars{max-width:320px}.pil-stem,.pil-br{font-size:1.8rem}.sh-bar{flex-direction:column;align-items:stretch;max-width:260px;margin-left:auto;margin-right:auto}.compat-5{max-width:260px}.chal-url{flex-direction:column}.chal-in{width:100%;text-align:center}.st-l{width:28px}}
+@media print{.nav,.gate,.foot,.btn,.proof,.amb,.sh-bar,.chal,.compat,.live-c,.social-zone,.topics{display:none}.frpt{display:block!important}body{background:#fff;color:#222}.qc{border-color:#ddd}}
+</style>
+</head>
+<body>
+<div class="amb" id="amb" aria-hidden="true"></div>
+<nav class="nav" role="banner"><div class="nav-i"><a href="/" class="logo" aria-label="沐洸八字療心室"><div class="logo-s" aria-hidden="true">沐</div><span class="logo-t">沐洸八字療心室</span></a></div></nav>
+<section class="hero ctn"><div class="hero-deco l" aria-hidden="true">金木水火土</div><div class="hero-deco r" aria-hidden="true">年月日時</div>
+<div class="hero-ey">命盤測驗</div>
+<h1>你的命格裡，<br/>藏著一個<strong>日主</strong>。</h1>
+<p class="hero-sub">日主是八字的核心——決定你看世界的方式、<br/>與人相處的模式、和天生的能量走向。</p>
+<div class="hero-line" aria-hidden="true"></div>
+</section>
+<div class="ctn">
+<div class="live-c" id="live-c" aria-label="即時" style="display:none"><span class="live-dot" aria-hidden="true"></span><span>已有 </span><span id="live-n">0</span><span> 人完成測驗</span></div>
+<div class="proof" role="region" aria-label="統計">
+<div style="text-align:center"><span class="proof-n">45<span style="font-size:0.6em;font-weight:400">秒</span></span><span class="proof-l">即可完成</span></div>
+<div style="text-align:center"><span class="proof-n">4.9</span><span class="proof-l">/ 5 滿意度</span></div>
+</div></div>
+<section class="ctn" id="quiz-area"><div class="qc"><div class="qhd"><span class="qhd-t">命盤推算</span><span class="qhd-p">資料不儲存 · 本地計算</span></div>
+<div class="qbd">
+<div class="steps" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="2" id="steps">
+<div class="st-c on" data-s="1">1</div><div class="st-l" id="st-l"></div><div class="st-c" data-s="2">2</div></div>
+<div id="step-1">
+<div class="fld"><label class="fld-lab" for="sel-bday">出生日期</label>
+<input type="date" id="sel-bday" min="1940-01-01" max="2010-12-31" class="date-native" aria-required="true" aria-label="出生日期">
+<p class="fld-hint">年月日用於推算命盤（年柱＋月柱＋日柱）。計算完全在本地裝置執行。<br><span style="color:var(--tx4)">※ 1–2 月出生者：八字以「立春」(約 2/4) 為年份分界，此處為概算值。</span></p>
+</div>
+<button class="btn btn-main" id="btn-go" disabled data-ga-event="quiz_calculate">揭示我的日主</button>
+</div>
+<div class="ld" id="ld" aria-live="polite"><div class="ld-ring" aria-hidden="true"></div><div class="ld-t" id="ld-t">排列你的命盤⋯</div><div class="ld-s">正在為你解讀命盤</div></div>
+<div class="res" id="res" aria-live="polite"></div>
+</div></div>
+<div class="testi ctn"><div class="testi-q">「本來只是好奇，沒想到日主分析說我是「辛金」——追求完美但對自己太嚴格——完全說中。後來約了施皇仁老師諮詢，才理解為什麼我在目前的工作一直不開心。」</div><div class="testi-a">— L.C.，科技業專案經理，28 歲</div></div>
+</section>
+<footer class="foot"><div class="ctn"><p>© 2026 沐洸八字療心室 · <a href="/privacy">隱私政策</a><br>本測驗僅收集出生年月日用於即時計算，<strong>不儲存、不傳輸</strong>任何個人資料。<br>計算完全在您的瀏覽器本地執行。依據台灣個人資料保護法第 8 條揭露。</p></div></footer>
+<script>
+(function(){
+'use strict';
+// ═══ CONFIG ═══
+var SITE_URL='https://muxuan-bazi.com/quiz';
+// ═══ SVG ICONS (vector symbols, no emoji) ═══
+var ICO={
+career:'<svg class="ins-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>',
+love:'<svg class="ins-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>',
+health:'<svg class="ins-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>',
+fire:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2c0 4-4 6-4 10a4 4 0 108 0c0-4-4-6-4-10z"/></svg>',
+work:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>',
+heart:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>',
+cal:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+child:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/></svg>',
+coin:'<svg class="topic-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M8 10h8M8 14h8"/></svg>',
+warn:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="vertical-align:middle;margin-right:4px"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>'
+};
+// ═══ Day Master SVG symbols ═══
+var DM_SYM={
+'甲':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><line x1="24" y1="4" x2="24" y2="44"/><line x1="24" y1="12" x2="36" y2="8"/><line x1="24" y1="18" x2="12" y2="14"/><line x1="24" y1="26" x2="34" y2="22"/></svg>',
+'乙':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 44c0-16 16-20 16-36" stroke-linecap="round"/><path d="M20 30c4-2 8-1 10 2" stroke-linecap="round"/></svg>',
+'丙':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="10"/><line x1="24" y1="4" x2="24" y2="10"/><line x1="24" y1="38" x2="24" y2="44"/><line x1="4" y1="24" x2="10" y2="24"/><line x1="38" y1="24" x2="44" y2="24"/><line x1="10" y1="10" x2="14" y2="14"/><line x1="34" y1="34" x2="38" y2="38"/><line x1="38" y1="10" x2="34" y2="14"/><line x1="10" y1="38" x2="14" y2="34"/></svg>',
+'丁':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 44V20"/><path d="M18 20c0-8 6-16 6-16s6 8 6 16c0 4-3 6-6 6s-6-2-6-6z"/></svg>',
+'戊':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 36L24 12l20 24"/><line x1="12" y1="36" x2="36" y2="36"/></svg>',
+'己':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M8 32c8-4 24-4 32 0" stroke-linecap="round"/><circle cx="16" cy="22" r="2"/><circle cx="24" cy="18" r="2"/><circle cx="32" cy="22" r="2"/><path d="M16 24v8M24 20v12M32 24v8" stroke-dasharray="2 2"/></svg>',
+'庚':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 4L24 40"/><path d="M16 4l8 6 8-6"/><line x1="18" y1="44" x2="30" y2="44" stroke-linecap="round"/></svg>',
+'辛':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 8l4 8-4 8-4-8z"/><circle cx="24" cy="30" r="8"/><path d="M20 28l4 6 4-6"/></svg>',
+'壬':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 20c8 8 16-8 20 0s12-8 20 0" stroke-linecap="round"/><path d="M4 30c8 8 16-8 20 0s12-8 20 0" stroke-linecap="round"/></svg>',
+'癸':'<svg class="rev-sym" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 6c-2 6-6 10-6 16a6 6 0 1012 0c0-6-4-10-6-16z"/><path d="M20 36c2 4 6 4 8 0" stroke-linecap="round"/></svg>'
+};
+// ═══ BAZI ENGINE ═══
+var ST=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'],BR=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'],SE=['木','木','火','火','土','土','金','金','水','水'],SY=['陽','陰','陽','陰','陽','陰','陽','陰','陽','陰'],BE=['水','土','木','木','土','火','火','土','金','金','土','水'],HID={'子':['癸'],'丑':['己','癸','辛'],'寅':['甲','丙','戊'],'卯':['乙'],'辰':['戊','乙','癸'],'巳':['丙','庚','戊'],'午':['丁','己'],'未':['己','丁','乙'],'申':['庚','壬','戊'],'酉':['辛'],'戌':['戊','辛','丁'],'亥':['壬','甲']};
+var NYN=['海中金','爐中火','大林木','路旁土','劍鋒金','山頭火','澗下水','城頭土','白蠟金','楊柳木','泉中水','屋上土','霹靂火','松柏木','長流水','砂石金','山下火','平地木','壁上土','金箔金','覆燈火','天河水','大驛土','釵環金','桑柘木','大溪水','砂中土','天上火','石榴木','大海水'];
+var NYE=['金','火','木','土','金','火','水','土','金','木','水','土','火','木','水','金','火','木','土','金','火','水','土','金','木','水','土','火','木','水'];
+var NYD={'海中金':'深藏不露的珍貴之金。才華需要伯樂，一旦被看見便光芒萬丈。','爐中火':'百鍊之火。你在壓力中成長，逆境是你的老師。','大林木':'參天大樹。成就需要時間，但一旦長成便撼動不了。','路旁土':'包容萬物的大地。所有人都能在你這裡找到安穩。','劍鋒金':'鋒利神兵。才華銳利精準，適合需要決斷的關鍵時刻。','山頭火':'照耀群山的烈日。天生適合站在舞台上。','澗下水':'山澗清泉。智慧清澈深遠，擅長洞察本質。','城頭土':'城牆之土。越大的責任越能激發你的力量。','白蠟金':'溫潤貴金。才華不張揚但品質極高。','楊柳木':'柔韌楊柳。看似柔弱實則韌性驚人。','泉中水':'地底清泉。創造力源源不絕。','屋上土':'遮風擋雨之土。天生懂得保護重要的人事物。','霹靂火':'雷電之火。行動力爆發性極強。','松柏木':'四季常青。意志力超群，越老越有味道。','長流水':'奔流江河。一旦找到方向勢不可擋。','砂石金':'經沙礪磨的真金。大器晚成的代表。','山下火':'隱藏的溫泉之火。溫暖不外露但靠近的人都能感受。','平地木':'平原草木。發展空間廣闘，不受限制。','壁上土':'穩固結構之土。擅長在框架中創造最大價值。','金箔金':'精緻之金。對美感和品質天生敏銳。','覆燈火':'燈下之火。影響力在親近的人身上最為顯著。','天河水':'銀河之水。格局大，適合宏觀策略。','大驛土':'驛站之土。天生的人脈連結者。','釵環金':'首飾之金。社交魅力和審美品味是最大資產。','桑柘木':'桑樹之木。價值在於能解決問題。','大溪水':'山間溪流。直覺和觀察力是決策最可靠的工具。','砂中土':'沙中之土。在看不見的地方默默發揮影響力。','天上火':'太陽之火。適合領導大規模群體。','石榴木':'碩果累累。努力會在某個時間點集中爆發。','大海水':'大海之水。潛力無限，需要找到正確出口。'};
+var TG={'ps':{n:'比肩',d:'同類夥伴。獨立自主、競爭與合作能量。'},'pd':{n:'劫財',d:'強勢同類。果斷行動力和競爭意識。'},'es':{n:'食神',d:'才華自然流露。口福、創意、樂觀。'},'ed':{n:'傷官',d:'銳利表達。叛逆創新、藝術氣質。'},'ws':{n:'偏財',d:'意外之財。投資眼光、人緣財。'},'wd':{n:'正財',d:'穩定收入。勤勞致富、務實態度。'},'ks':{n:'七殺',d:'壓力型權力。野心、魄力、改革勇氣。'},'kd':{n:'正官',d:'正統權力。責任感、社會地位、正直。'},'rs':{n:'偏印',d:'非典型學習。獨特思維、靈感。'},'rd':{n:'正印',d:'正統學習。學歷、長輩支持。'}};
+function getTG(a,b){var mE=SE[a],oE=SE[b],sp=(a%2)===(b%2),cy=['木','火','土','金','水'],mi=cy.indexOf(mE);if(mE===oE)return sp?'ps':'pd';if(cy[(mi+1)%5]===oE)return sp?'es':'ed';if(cy[(mi+2)%5]===oE)return sp?'ws':'wd';if(cy[(mi+3)%5]===oE)return sp?'ks':'kd';return sp?'rs':'rd';}
+var SM={'木':{s:[2,3],n:[1,4,11,12]},'火':{s:[5,6],n:[2,3,4,7]},'土':{s:[4,7,10,1],n:[5,6]},'金':{s:[8,9],n:[7,10,1]},'水':{s:[11,12],n:[1,8,9,10]}};
+var STX={'s':{l:'當令（旺）',c:'ssn-s',d:'日主在此月份能量最旺——如魚得水。'},'n':{l:'平和（相）',c:'ssn-n',d:'日主處於平衡狀態，適應力良好。'},'w':{l:'失令（休）',c:'ssn-w',d:'日主相對弱勢——但失令者更懂借力使力，生存策略更靈活。'}};
+function getSS(e,m){var s=SM[e];if(s.s.indexOf(m)>=0)return's';if(s.n.indexOf(m)>=0)return'n';return'w';}
+function jdn(y,m,d){var a=Math.floor((14-m)/12),y2=y+4800-a,m2=m+12*a-3;return d+Math.floor((153*m2+2)/5)+365*y2+Math.floor(y2/4)-Math.floor(y2/100)+Math.floor(y2/400)-32045;}
+function dayPillar(y,m,d){var j=jdn(y,m,d);return{si:(j+9)%10,bi:(j+1)%12};}
+function calc(y,m,d){var ysi=(y-4)%10,ybi=(y-4)%12;var mbi=m%12,eSi=m>=2?ysi:(y-5)%10,ss=((eSi%5)*2+2)%10,mo=(m+10)%12,msi=(ss+mo)%10;var dp=dayPillar(y,m,d),dsi=dp.si,dbi=dp.bi;var yH=HID[BR[ybi]],mH=HID[BR[mbi]],dH=HID[BR[dbi]];var ji=(y-4)%60,ni=Math.floor(ji/2);var yTG=getTG(dsi,ysi),mTG=getTG(dsi,msi);var hTGs=[];[].concat(yH||[],mH||[],dH||[]).forEach(function(hs){var hi=ST.indexOf(hs),t=getTG(dsi,hi);if(!hTGs.some(function(x){return x.tg===t}))hTGs.push({s:hs,e:SE[hi],tg:t,i:TG[t]});});var dist={'木':0,'火':0,'土':0,'金':0,'水':0};dist[SE[ysi]]+=18;dist[SE[msi]]+=18;dist[SE[dsi]]+=30;dist[BE[ybi]]+=8;dist[BE[mbi]]+=8;dist[BE[dbi]]+=10;(yH||[]).forEach(function(h,i){dist[SE[ST.indexOf(h)]]+=(i===0?4:2);});(mH||[]).forEach(function(h,i){dist[SE[ST.indexOf(h)]]+=(i===0?4:2);});(dH||[]).forEach(function(h,i){dist[SE[ST.indexOf(h)]]+=(i===0?4:2);});var tt=0;for(var k in dist)tt+=dist[k];for(var k2 in dist)dist[k2]=Math.round(dist[k2]/tt*100);var sm=0;for(var k3 in dist)sm+=dist[k3];dist[SE[dsi]]+=(100-sm);var dmEl=SE[dsi];return{y:{s:ST[ysi],si:ysi,b:BR[ybi],bi:ybi,el:SE[ysi],yy:SY[ysi],gz:ST[ysi]+BR[ybi],h:yH},m:{s:ST[msi],si:msi,b:BR[mbi],bi:mbi,el:SE[msi],yy:SY[msi],gz:ST[msi]+BR[mbi],h:mH},d:{s:ST[dsi],si:dsi,b:BR[dbi],bi:dbi,el:dmEl,yy:SY[dsi],gz:ST[dsi]+BR[dbi],h:dH},ny:{n:NYN[ni],e:NYE[ni],d:NYD[NYN[ni]]||''},yTG:TG[yTG],mTG:TG[mTG],hTGs:hTGs.slice(0,3),ss:getSS(dmEl,m),dist:dist,dmEl:dmEl};}
+// ═══ 10 DAY MASTERS (pure 繁體中文, with shadow) ═══
+var DM={
+'甲':{n:'甲木',sub:'陽木・開拓者',k:'甲',traits:['開創','領導','正直','衝勁','遠見'],sum:'你是參天大樹——目標明確、不斷向上。你天生具備領袖氣質，不是因為你要求別人跟隨，而是你走的方向讓人想跟。',shadow:'甲木最大的盲點是剛愎自用。你太習慣「我來決定方向」，久了身邊的人不是被壓扁就是離開。你以為你在帶領，其實你在孤行。',career:'創業、管理、建築、法律——你在「開疆闢土」的角色裡最自在。',love:'你在關係中是保護者。你需要的不是崇拜，而是一個能在暴風雨裡和你並肩的人。',health:'肝膽、頸椎。春天是巔峰，但你最大的問題是不知道停。',muray:'甲木的人最大的優勢是方向感。2026 年，你只需要做一件事：選定方向後，拒絕所有不在那條路上的機會。'},
+'乙':{n:'乙木',sub:'陰木・外交家',k:'乙',traits:['柔韌','適應','優雅','人脈','策略'],sum:'你是藤蔓——看似柔軟，但能攀上任何高牆。你的力量不在正面衝突，而在迂迴中找到最佳路徑。',shadow:'乙木的陰影是過度妥協。你太擅長讀空氣，久了你自己都不知道哪些想法是真心的、哪些是為了討好。失去立場的人，最終也會失去別人的尊重。',career:'公關、諮詢、設計、外交——你在需要「軟實力」的領域無人能及。',love:'你在關係中溫柔但不軟弱。你需要一個懂得你「柔」裡面那股「韌」的人。',health:'肝臟、筋骨。保持身體柔軟度對你特別重要。',muray:'乙木的人是我見過最被低估的類型。2026 年，別怕展示你的野心——你的方式已經夠優雅了。'},
+'丙':{n:'丙火',sub:'陽火・照耀者',k:'丙',traits:['熱情','光明','慷慨','感染力','直覺'],sum:'你是太陽——走到哪裡都帶來光和熱。你不需要刻意表現，你的能量場就是你的名片。',shadow:'丙火最容易犯的錯是「燒掉別人」而不自知。你的熱情對自己是能量，對別人可能是壓力。學不會收斂光芒的太陽，會把身邊的人曬傷。',career:'行銷、演講、娛樂、領導——你在「站在人前」的位置最能發揮。',love:'你愛起來像烈日，但也需要學會：不是每個人都承受得了你的熱度。',health:'心臟、眼睛。夏天能量最旺但最易透支。每天留 20 分鐘完全安靜。',muray:'丙火的人 30 歲前靠熱情就能走很遠，但 30 歲後需要深度。2026 下半年，刻意培養一項需要耐心的技能。'},
+'丁':{n:'丁火',sub:'陰火・策略家',k:'丁',traits:['細膩','洞察','溫暖','專注','藝術'],sum:'你是燭光——不像太陽那樣普照，但在黑暗中你是唯一的光源。你的溫暖是有選擇的，你的洞察力在安靜時最銳利。',shadow:'丁火的風險是「看太透」反而不快樂。你太清楚別人的動機和虛偽，久了會變得世故冷漠。你以為自己是看透人性，其實是在用洞察力築起一道牆。',career:'研究、分析、藝術、心理諮詢——你在「需要深度觀察」的領域裡出類拔萃。',love:'你的愛是深沉的、專注的。你不會愛很多人，但你愛的人會被你看見靈魂最深處。',health:'心臟、血液循環。避免熬夜，你的直覺需要充足的睡眠來運作。',muray:'丁火的人是天生的策略家。2026 年，信任你的直覺多過別人的建議——你的第一反應幾乎從不出錯。'},
+'戊':{n:'戊土',sub:'陽土・高山',k:'戊',traits:['穩重','可靠','包容','厚實','守信'],sum:'你是高山——不動如山，萬物依附。你是所有人在混亂中的定心石。你的穩定不是無聊，是一種讓人安心的力量。',shadow:'戊土最大的危險是「穩定到僵化」。你太害怕變動，所以在明知道應該改變的時候還是不動。你的穩定，有時候只是逃避的另一個名字。',career:'金融、不動產、專案管理、營運——你在「需要信任」的角色裡是絕對王者。',love:'你給的安全感是別人用錢買不到的。但你需要一個能帶你看不同風景的人。',health:'脾胃。規律作息比任何保健食品有效。學會在身體說不的時候停下來。',muray:'戊土是我諮詢中成功企業家比例最高的日主。2026 年，做一件完全陌生的事——你的適應力會嚇到你自己。'},
+'己':{n:'己土',sub:'陰土・園丁',k:'己',traits:['滋養','細心','務實','謙遜','耐心'],sum:'你是沃土——表面看不出什麼，但所有種下去的種子都能在你這裡長成。你是天生的培育者。',shadow:'己土最深的傷是「為別人活」。你照顧所有人，唯獨忘了自己。你的善良如果沒有底線，就會變成別人理所當然的提款機。',career:'教育、人資、農業、餐飲、照護——你在「培養人」的領域最有成就感。',love:'你的愛是日常的、不張揚的。你需要一個懂得珍惜這種「安靜的愛」的人。',health:'消化系統、肌肉。吃東西要細嚼慢嚥，你的身體反映你的情緒狀態。',muray:'己土的人最容易犯的錯是把所有人放在自己前面。2026 年，練習說：「不好意思，我先照顧自己。」'},
+'庚':{n:'庚金',sub:'陽金・劍客',k:'庚',traits:['果斷','剛毅','正義','效率','競爭'],sum:'你是寶劍——銳利、果斷、不拖泥帶水。你的判斷力是刀鋒級的。在需要有人做決定的時刻，你永遠第一個站出來。',shadow:'庚金最大的風險是你的偏執把身邊的人一個一個推走。你覺得自己是「有原則」，別人覺得你是「不留餘地」。刀太利會傷人，而你傷的往往是最親近的人。',career:'法律、軍警、外科、工程、競技——你在「需要果斷」的場合最能發光。',love:'你在愛裡忠誠到骨子裡，但你的直接有時候傷人。學會在「對的話」和「對的時機」之間找到平衡。',health:'肺、大腸、皮膚。秋天是你的巔峰。定期斷捨離，身體和心理都會變輕。',muray:'庚金最大的天賦是「做決定」。2026 年，在重大決策前給自己 48 小時。'},
+'辛':{n:'辛金',sub:'陰金・珠玉',k:'辛',traits:['精緻','敏銳','完美主義','品味','內斂'],sum:'你是珠寶——經過打磨才顯露光芒。你對品質的要求近乎偏執，但這份偏執讓你做出來的每件事都超越平庸。',shadow:'辛金的地獄是「永遠不夠好」。你對自己的標準高到不合理，然後把同樣的標準套在別人身上。你追求的完美如果變成了焦慮的來源，那它就不是完美，而是自我折磨。',career:'精品、品管、藝術、珠寶、科技研發——你在「品質決定一切」的領域裡是王。',love:'你的高標準讓你在感情中很挑，但一旦選定就無比深情。你需要一個讓你願意「不完美」的人。',health:'呼吸系統、皮膚。空氣品質對你影響特別大。保持環境整潔是你的養生之道。',muray:'辛金是隱藏的完美主義者。2026 年，學會說「這樣已經夠好了」——把精力留給真正重要的部分。'},
+'壬':{n:'壬水',sub:'陽水・大海',k:'壬',traits:['智慧','包容','流動','策略','格局'],sum:'你是大海——表面波瀾不驚，底下暗流洶湧。你的格局比別人大三倍，你看到的是全局而不是局部。',shadow:'壬水的致命弱點是「想得到但做不到」。你腦中永遠有十個絕妙計畫，但真正執行到底的可能一個都沒有。世界不會獎勵最聰明的人，只會獎勵做到的人。',career:'投資、策略、國際貿易、科技——你在「需要大格局思維」的領域裡如魚得水。',love:'你渴望的是靈魂共鳴，不是表面陪伴。你需要一個思維深度能跟上你的人。',health:'腎臟、膀胱。冬天是充電期。睡眠是你最重要的投資。',muray:'壬水是天生的戰略家，但最大的敵人是「想太多而不行動」。2026 年：想到第三天還在想的事，就去做。'},
+'癸':{n:'癸水',sub:'陰水・雨露',k:'癸',traits:['靈性','直覺','滲透','柔化','轉化'],sum:'你是雨水——無聲無息地滲透一切。你的影響力不是風暴式的，而是潤物細無聲。你最強的能力是「轉化」——把困境變成養分。',shadow:'癸水最大的風險是「吸收太多別人的情緒」。你的敏感是天賦，但沒有邊界的敏感就是詛咒。久了，你會以為整個世界都很沉重——其實是你背了太多不屬於你的重量。',career:'心理學、靈性工作、寫作、教育、療癒——你在「觸碰人心」的領域有天賦。',love:'你的敏感度讓你能感知對方未說出口的需要。但你也容易吸收別人的情緒——學會分辨「這是我的還是對方的」。',health:'腎臟、免疫系統。水分攝取對你特別關鍵。靜坐冥想是你的最佳養生法。',muray:'癸水是最有靈性天賦的日主。2026 年，你的直覺會特別準——但前提是要給它安靜的空間。每天留 10 分鐘什麼都不做。'}
+};
+var EC={'木':{c:'var(--wood)',tb:'rgba(72,184,104,0.12)',tc:'var(--wood)',bg:'var(--wood-bg)',gl:'var(--wood-gl)'},'火':{c:'var(--fire)',tb:'rgba(232,72,48,0.12)',tc:'var(--fire)',bg:'var(--fire-bg)',gl:'var(--fire-gl)'},'土':{c:'var(--earth)',tb:'rgba(216,168,48,0.12)',tc:'var(--earth)',bg:'var(--earth-bg)',gl:'var(--earth-gl)'},'金':{c:'var(--metal)',tb:'rgba(168,184,200,0.12)',tc:'var(--metal)',bg:'var(--metal-bg)',gl:'var(--metal-gl)'},'水':{c:'var(--water)',tb:'rgba(48,136,200,0.12)',tc:'var(--water)',bg:'var(--water-bg)',gl:'var(--water-gl)'}};
+var RAR={'木':18,'火':16,'土':24,'金':22,'水':20};
+var RAR_M={'木':'只有 18% 的人以木為日主——天生的開拓者。','火':'僅 16% 的人以火為日主——你走到哪都是焦點。','土':'24% 的人以土為日主——你是這個世界最需要的穩定力量。','金':'22% 的人以金為日主——你的判斷力是真正稀缺的天賦。','水':'只有 20% 的人以水為日主——你看到的深度別人觸及不到。'};
+var SHARE={'木':'我的日主是「甲木」— 陽木・開拓者\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n','火':'我的日主是「丙火」— 陽火・照耀者\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n','土':'我的日主是「戊土」— 陽土・高山\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n','金':'我的日主是「庚金」— 陽金・劍客\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n','水':'我的日主是「壬水」— 陽水・大海\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n'};
+var CMP={'木':{'木':'雙木成林，創意加倍但容易各走各的。','火':'木生火，你是對方最好的燃料。天生互補。','土':'木剋土，有張力但也有成長空間。','金':'金剋木，挑戰大但磨合後最持久。','水':'水生木，對方是你的滋養者。極佳搭配。'},'火':{'木':'木生火，對方給你源源不絕的能量。','火':'雙火燎原，激情滿分但注意燃燒殆盡。','土':'火生土，你照亮對方的世界。互補極佳。','金':'火剋金，衝突多但也最深刻。','水':'水剋火，張力極大，需要極強包容力。'},'土':{'木':'木剋土，有壓力但推動你成長。','火':'火生土，對方的熱情讓你更有活力。','土':'雙土厚重，穩定但可能缺乏刺激。','金':'土生金，你是對方最好的後盾。','水':'土剋水，你能穩住對方的飄忽。'},'金':{'木':'金剋木，你的果斷幫對方聚焦。','火':'火剋金，對方讓你既心動又抗拒。','土':'土生金，對方是你最溫暖的避風港。','金':'雙金鏗鏘，默契高但都太硬。','水':'金生水，你的紀律培養對方的智慧。'},'水':{'木':'水生木，你滋養對方的成長。天作之合。','火':'水剋火，你的冷靜平衡對方的衝動。','土':'土剋水，對方穩住你，你潤澤對方。','金':'金生水，對方的紀律讓你有方向。','水':'雙水深邃，靈魂伴侶但避免一起沉溺。'}};
+function shareUrl(){var o=location.origin;return(o&&o!=='null'?o+location.pathname:SITE_URL)+'?ref=share';}
+function shareLINE(t,u){window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(u)+'&text='+encodeURIComponent(t),'_blank');}
+function copyTxt(t,el){navigator.clipboard.writeText(t).then(function(){var o=el.textContent;el.textContent='已複製 ✓';setTimeout(function(){el.textContent=o},1500)});}
+function elC(e){return EC[e]?EC[e].c:'var(--tx3)';}
+var gM=new URLSearchParams(location.search).get('gate')||'partial';
+var bdInput=document.getElementById('sel-bday'),btn=document.getElementById('btn-go'),res=document.getElementById('res'),st1=document.getElementById('step-1'),ld=document.getElementById('ld'),ldT=document.getElementById('ld-t'),s1=document.querySelector('[data-s="1"]'),s2=document.querySelector('[data-s="2"]'),sL=document.getElementById('st-l'),stE=document.getElementById('steps'),amb=document.getElementById('amb');
+function ckDate(){btn.disabled=!bdInput.value;}
+bdInput.addEventListener('change',ckDate);bdInput.addEventListener('input',ckDate);bdInput.addEventListener('blur',ckDate);
+var _ckI=setInterval(function(){if(bdInput.value){btn.disabled=false;clearInterval(_ckI);}},500);
+btn.addEventListener('click',function(){
+var v=bdInput.value;if(!v)return;var parts=v.split('-'),yr=+parts[0],mo=+parts[1],dy=+parts[2];if(!yr||!mo||!dy||yr<1940||yr>2010)return;
+var r=calc(yr,mo,dy),pe=r.dmEl,ec=EC[pe],dm=DM[r.d.s];
+if(window.dataLayer)window.dataLayer.push({event:'quiz_complete',dayMaster:r.d.s,element:pe,year:yr,month:mo,day:dy,nayin:r.ny.n});
+st1.style.display='none';ld.classList.add('on');
+var msgs=['排列你的年柱⋯','排列月柱⋯','排列日柱⋯','四柱八字是古老的生命藍圖','理解自己，才能做出最好的決定','正在為你生成命盤解讀⋯'];
+var mi=0;var iv=setInterval(function(){mi++;if(mi<msgs.length)ldT.textContent=msgs[mi]},500);
+setTimeout(function(){
+clearInterval(iv);ld.classList.remove('on');s1.classList.remove('on');s1.classList.add('ok');s2.classList.add('on');sL.classList.add('ok');stE.setAttribute('aria-valuenow','2');
+document.body.style.backgroundColor=ec.bg;amb.style.background='radial-gradient(circle,'+ec.gl+' 0%,transparent 70%)';
+var sUrl=shareUrl(),h='';
+// ═══ REVEAL ═══
+h+='<div class="rev"><div class="rev-kanji" style="color:'+ec.c+'">'+dm.k+'</div>'+(DM_SYM[dm.k]||'')+'<div class="rev-name">'+dm.n+'</div><div class="rev-sub">'+dm.sub+'</div><div class="rev-dm">'+dm.sum+'</div></div>';
+// SHADOW
+h+='<div class="sum-card" style="border-color:rgba(232,72,48,0.15);background:rgba(232,72,48,0.02)"><h3 style="color:var(--fire)">'+ICO.warn+' 陰影面</h3><p>'+dm.shadow+'</p></div>';
+// SEAL
+h+='<div class="seal" style="background:'+ec.bg+';border-color:'+ec.c+'18"><div class="seal-stamp" style="border-color:'+ec.c+';color:'+ec.c+'">'+r.d.s+'</div><div class="seal-k" style="color:'+ec.c+'">'+dm.k+'</div><div class="seal-t">日主「'+dm.n+'」· '+r.ny.n+'</div><div class="seal-s">'+r.y.gz+' · '+r.m.gz+' · '+r.d.gz+'</div><div class="seal-tags">';dm.traits.forEach(function(t){h+='<span class="seal-tag" style="background:'+ec.tb+';color:'+ec.tc+'">'+t+'</span>';});h+='</div><div class="seal-f"><div class="seal-ft">沐洸八字療心室 · 命盤測驗</div></div></div>';
+// RARITY
+h+='<div class="rarity"><div class="rarity-pct" style="color:'+ec.c+'">'+RAR[pe]+'%</div><div class="rarity-msg">'+RAR_M[pe]+'</div></div>';
+// ═══ 命理分析區 ═══
+h+='<div class="sec"><span class="sec-l"></span><span class="sec-lb">命盤</span><span class="sec-l"></span></div>';
+h+='<div class="pillars" role="table" aria-label="命盤">';
+h+='<div class="pil"><div class="pil-lab">年 柱</div><div class="pil-stem" style="color:'+elC(r.y.el)+'">'+r.y.s+'</div><div class="pil-sel" style="color:'+elC(r.y.el)+'">'+r.y.el+' · '+r.y.yy+'</div><div class="pil-br">'+r.y.b+'</div><div class="pil-bel">'+BE[r.y.bi]+'</div><div class="pil-hid"><div class="pil-hid-lb">藏干</div><div class="pil-hid-st">';(r.y.h||[]).forEach(function(hs){h+='<span class="pil-hs" style="color:'+elC(SE[ST.indexOf(hs)])+'">'+hs+'</span>';});h+='</div></div></div>';
+h+='<div class="pil"><div class="pil-lab">月 柱</div><div class="pil-stem" style="color:'+elC(r.m.el)+'">'+r.m.s+'</div><div class="pil-sel" style="color:'+elC(r.m.el)+'">'+r.m.el+' · '+r.m.yy+'</div><div class="pil-br">'+r.m.b+'</div><div class="pil-bel">'+BE[r.m.bi]+'</div><div class="pil-hid"><div class="pil-hid-lb">藏干</div><div class="pil-hid-st">';(r.m.h||[]).forEach(function(hs){h+='<span class="pil-hs" style="color:'+elC(SE[ST.indexOf(hs)])+'">'+hs+'</span>';});h+='</div></div></div>';
+h+='<div class="pil dm"><div class="pil-lab">日 柱 ★ 日主</div><div class="pil-stem" style="color:'+ec.c+'">'+r.d.s+'</div><div class="pil-sel" style="color:'+ec.c+'">'+r.d.el+' · '+r.d.yy+'</div><div class="pil-br">'+r.d.b+'</div><div class="pil-bel">'+BE[r.d.bi]+'</div><div class="pil-hid"><div class="pil-hid-lb">藏干</div><div class="pil-hid-st">';(r.d.h||[]).forEach(function(hs){h+='<span class="pil-hs" style="color:'+elC(SE[ST.indexOf(hs)])+'">'+hs+'</span>';});h+='</div></div></div></div>';
+h+='<div class="ny"><div class="ny-lb">年柱納音</div><div class="ny-n">'+r.ny.n+'（'+r.ny.e+'）</div><div class="ny-d">'+r.ny.d+'</div></div>';
+// TEN GODS
+h+='<div class="sec"><span class="sec-l"></span><span class="sec-lb">十神分析（以日主 '+r.d.s+' 為準）</span><span class="sec-l"></span></div>';
+h+='<div class="tg-grid"><div class="tg-item"><div class="tg-hd"><span class="tg-n">'+r.yTG.n+'</span><span class="tg-tp" style="background:'+ec.tb+';color:'+ec.tc+'">'+r.y.s+' · 年干</span></div><p class="tg-d">'+r.yTG.d+'</p></div>';
+h+='<div class="tg-item"><div class="tg-hd"><span class="tg-n">'+r.mTG.n+'</span><span class="tg-tp" style="background:'+ec.tb+';color:'+ec.tc+'">'+r.m.s+' · 月干</span></div><p class="tg-d">'+r.mTG.d+'</p></div>';
+r.hTGs.forEach(function(htg){h+='<div class="tg-item"><div class="tg-hd"><span class="tg-n">'+htg.i.n+'</span><span class="tg-tp" style="background:rgba(220,192,112,0.06);color:var(--tx4)">'+htg.s+' · 藏干</span></div><p class="tg-d">'+htg.i.d+'</p></div>';});h+='</div>';
+var ss=STX[r.ss];h+='<div class="ssn"><div class="ssn-t">季節旺衰</div><div class="ssn-badge '+ss.c+'">'+ss.l+'</div><div class="ssn-d">'+ss.d+'</div></div>';
+h+='<div class="sec"><span class="sec-l"></span><span class="sec-lb">五行能量分佈</span><span class="sec-l"></span></div><div class="ebar"><div class="ebar-t">含天干 + 地支 + 藏干全面計算</div>';
+['木','火','土','金','水'].forEach(function(el){var p=r.dist[el];h+='<div class="erow"><span class="eel">'+el+'</span><div class="ebg"><div class="efill" style="width:0%;background:'+EC[el].c+'" data-w="'+p+'" role="progressbar" aria-valuenow="'+p+'" aria-label="'+el+' '+p+'%"></div></div><span class="epct">'+p+'%</span></div>';});h+='</div>';
+// COMPAT (命理區)
+h+='<div class="compat"><h3>你和對方的五行合嗎？</h3><p>點選對方的元素，看看你們的相生相剋。</p><div class="compat-grid"><div style="text-align:center"><div class="compat-me-k" style="color:'+ec.c+'">'+dm.k+'</div><div class="compat-me-l">你 · '+pe+'</div></div><div class="compat-vs">×</div><div style="text-align:center"><div class="compat-them">？</div><div class="compat-me-l" style="color:var(--tx4)">對方</div></div></div><div class="compat-5">';
+['木','火','土','金','水'].forEach(function(el){h+='<button style="background:'+EC[el].tb+';color:'+EC[el].tc+'" data-cel="'+el+'">'+el+'</button>';});h+='</div><div class="compat-r" id="compat-r"></div></div>';
+// BRIDGE
+h+='<div class="bridge"><div class="bridge-t">目前的命盤 vs 完整四柱：還差什麼？</div><div class="bridge-g"><div class="bridge-col bridge-ok"><div class="bridge-col-t">✓ 已揭示（年＋月＋日柱）</div>真正的日主（性格核心）<br>納音命格 · 十神關係<br>季節旺衰 · 能量分佈<br>配偶宮（日支藏干）</div><div class="bridge-col bridge-lk"><div class="bridge-col-t">需要時柱（出生時辰）</div>子女宮 · 晚年運勢<br>大運走勢（每 10 年轉折）<br>2026 流年逐月吉凶<br>完整八字格局判定</div></div><div class="bridge-note">時柱需要出生「時辰」。多數人需要詢問父母才能確認——這是諮詢或完整報告才能提供的最終精準度。</div></div>';
+// 施皇仁 BIO
+h+='<div class="muray-bio"><div class="muray-photo" aria-label="施皇仁老師">施</div><div class="muray-info"><div class="muray-name">施皇仁 Jimmy</div><div class="muray-cred">命理策略顧問 · 執業 8 年 · 累計批盤超過 5,000 份</div><div class="muray-desc">專長八字命理、流年運勢分析與職涯策略規劃。<br>擅長將傳統命理智慧轉化為現代人可執行的決策建議。</div></div></div>';
+// INSIGHTS (free, vector icons)
+h+='<div class="ins-grid"><div class="ins">'+ICO.career+'<div class="ins-t">職涯方向</div><p class="ins-b">'+dm.career+'</p></div><div class="ins">'+ICO.love+'<div class="ins-t">感情與關係</div><p class="ins-b">'+dm.love+'</p></div><div class="ins">'+ICO.health+'<div class="ins-t">健康提醒</div><p class="ins-b">'+dm.health+'</p></div></div>';
+// TOPICS (vector icons)
+h+='<div class="topics"><div class="sec"><span class="sec-l"></span><span class="sec-lb">其他人都在關注的課題</span><span class="sec-l"></span></div><div class="topics-grid">';
+h+='<div class="topic-item">'+ICO.fire+'2026 丙午年，我的日主會受到什麼影響？</div>';
+h+='<div class="topic-item">'+ICO.work+'我目前的工作適合我的命格嗎？</div>';
+h+='<div class="topic-item">'+ICO.heart+'我和另一半的八字到底合不合？</div>';
+h+='<div class="topic-item">'+ICO.cal+'2026 有沒有特別要注意的月份？</div>';
+h+='<div class="topic-item">'+ICO.child+'小孩的命盤可以看出什麼天賦？</div>';
+h+='<div class="topic-item">'+ICO.coin+'什麼時候是我的財運高峰期？</div>';
+h+='</div></div>';
+// LINE GATE
+if(gM==='partial'){h+='<div class="gate" id="gate"><h3>施皇仁老師的個人化手記</h3><p>針對你的日主「'+dm.n+'」，老師寫了一段 2026 年的專屬建議。加入 LINE 即可閱讀。</p><button class="btn btn-line" id="btn-ln" data-ga-event="line_gate_click"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg> 加入 LINE 閱讀老師手記</button><button class="btn-skip" id="btn-sk" data-ga-event="gate_skip">先跳過</button></div>';}
+h+='<div class="frpt'+(gM==='partial'?'':' unlocked')+'" id="frpt"><div class="muray"><div class="muray-av">施</div><div><div class="muray-bd">「'+dm.muray+'」</div><div class="muray-nm">— 施皇仁 · 命理策略顧問</div></div></div></div>';
+// ═══ 社交互動區 ═══
+h+='<div class="social-zone"><div class="sec"><span class="sec-l"></span><span class="sec-lb">分享與互動</span><span class="sec-l"></span></div>';
+h+='<div class="sh-prompt">覺得準？分享給朋友，看看你們的日主合不合</div>';
+h+='<div class="sh-bar"><button class="sh-btn sh-line" id="sh-ln" data-ga-event="share_line"><svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg> 傳到 LINE</button>';
+h+='<button class="sh-btn sh-copy" id="sh-cp" data-ga-event="share_copy">複製結果</button></div>';
+h+='<div class="chal"><div class="chal-t"><strong>邀請朋友來測：</strong>傳給對方測，再回來比對合不合。</div><div class="chal-url"><input class="chal-in" id="ch-url" value="'+sUrl+'" readonly><button class="chal-cp" id="ch-cp">複製連結</button></div></div></div>';
+h+='<div style="text-align:center;margin-top:20px"><button class="btn btn-ghost" id="btn-re" data-ga-event="quiz_restart">↺ 重新測驗</button></div>';
+res.innerHTML=h;res.classList.add('vis');
+setTimeout(function(){res.querySelectorAll('.efill').forEach(function(f){f.style.width=f.getAttribute('data-w')+'%'});},400);
+var lnB=document.getElementById('btn-ln'),skB=document.getElementById('btn-sk'),fp=document.getElementById('frpt'),gt=document.getElementById('gate');
+function unlock(){if(fp)fp.classList.add('unlocked');if(gt)gt.style.display='none';}
+if(lnB)lnB.addEventListener('click',function(){if(window.dataLayer)window.dataLayer.push({event:'line_gate_click'});window.open('https://line.me/R/ti/p/@663mznrp','_blank');unlock();});
+if(skB)skB.addEventListener('click',function(){if(window.dataLayer)window.dataLayer.push({event:'gate_skip'});unlock();});
+var shLn=document.getElementById('sh-ln'),shCp=document.getElementById('sh-cp');
+// Fix: use dm-specific share text with product intro
+var shareText='我的日主是「'+dm.n+'」— '+dm.sub+'\n想知道你的命格裡藏著什麼？\n沐洸八字療心室・免費命盤測驗\n'+sUrl;
+if(shLn)shLn.addEventListener('click',function(){shareLINE(shareText,sUrl);});
+if(shCp)shCp.addEventListener('click',function(){copyTxt(shareText,shCp);});
+res.querySelectorAll('[data-cel]').forEach(function(b){b.addEventListener('click',function(){var el2=b.getAttribute('data-cel'),cr=document.getElementById('compat-r');if(cr)cr.innerHTML='<strong style="color:'+EC[el2].c+'">'+pe+' × '+el2+'：</strong>'+CMP[pe][el2];res.querySelectorAll('[data-cel]').forEach(function(x){x.style.opacity=x===b?'1':'0.5';});});});
+var chCp=document.getElementById('ch-cp'),chUrl=document.getElementById('ch-url');if(chCp&&chUrl)chCp.addEventListener('click',function(){chUrl.select();copyTxt(chUrl.value,chCp);});
+var reB=document.getElementById('btn-re');if(reB)reB.addEventListener('click',function(){res.classList.remove('vis');res.innerHTML='';st1.style.display='block';bdInput.value='';btn.disabled=true;s1.classList.add('on');s1.classList.remove('ok');s2.classList.remove('on');sL.classList.remove('ok');stE.setAttribute('aria-valuenow','1');document.body.style.backgroundColor='';amb.style.background='';document.getElementById('quiz-area').scrollIntoView({behavior:'smooth'});});
+res.scrollIntoView({behavior:'smooth',block:'start'});
+},3400);
+});
+(function(){var lC=document.getElementById('live-c'),lN=document.getElementById('live-n');})();
+})();
+</script>
+</body>
+</html>
